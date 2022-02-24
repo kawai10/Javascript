@@ -36,3 +36,18 @@ let plus = (a,b) => {
     let result = a + b;
     return result;
 }
+
+//화살표 함수에는 this가 없음 (super도 없음)
+
+let group = {
+    title : "1모둠",
+    students : ["보라", "호진", "지민"],
+
+    showList(){
+        this.students.forEach(
+            student => alert(this.title + ': ' + student) // 1모둠 : 보라 ....
+        )
+    }
+}
+
+group.showList();

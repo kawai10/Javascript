@@ -1,4 +1,45 @@
 // Express 미들웨어
+// 미들웨어란?
+// 미들웨어는 간단하게 말해서 클라이언트에게 요청이 오고 서버에서 응답을 보내기 전에 어떤 처리를 위해 거쳐가는 함수라고 할수있다.
+
+// 1. 어플리케이션 레벨 미들웨어
+// app.use() 및 app.METHOD()함수를 이용하여 app 오브젝트의 인스턴스에 바운드 시킴.
+// 미들웨어를 어플리케이션 영역에서 지정한 path대로 처리 가능하게 하도록 함.
+
+app.use(function (req, res, next) {
+    console.log('Time:', Date.now());
+    next();
+});
+
+// 특정 경로나 http method에 대해서만 적용할 수도 있음.
+
+
+// 모든 /user/:id 요청에 대해 작동
+app.use('/user/:id', function (req, res, next) {
+    console.log('Request Type:', req.method);
+    next();
+});
+
+// /user/:id인 GET 요청에 대해서만 응답
+    app.get('/user/:id', function (req, res, next) {
+    res.send('USER');
+});
+
+// 하나의 경로를 통해 2개 이상의 미들웨어 함수를 처리할수 있는 방법
+app.use('/user/:id', function(req, res, next) {
+    console.log('Request URL:', req.originalUrl);
+    next();
+    }, function (req, res, next) {
+        console.log('Request Type:', req.method);
+        next();
+    });
+
+// 라우터 레벨 미들웨어
+// 라우터 레벨 미들웨어는 express.Router() 인스턴스에 바인드 된다는 점을 제외하고는 어플리케이션 레벨 미들웨어와 동일한 방식으로 작동함.
+// router 를 사용하는 이유는 특정 root url을 기점으로 기능이나 로직별로 라우팅을 나눠서 관리할 수 있단느 점.
+
+
+
 // express.json() 과 express.urlencoded()
 
 // 클라이언트에서 body에 값을 담아서 서버로 보낼때 서버에서 그냥 받을수 없음

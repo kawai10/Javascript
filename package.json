@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  },
+  "name": "knowlege",
+  "description": "자바스크립트의 기본 개념들과 문법, API 정리",
+  "version": "1.0.0",
+  "main": "Node.js",
+  "type": "module",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./express/middleware-next.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kawai10/knowlege.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kawai10/knowlege/issues"
+  },
+  "homepage": "https://github.com/kawai10/knowlege#readme"
+}

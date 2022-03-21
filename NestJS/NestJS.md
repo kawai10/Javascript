@@ -11,13 +11,14 @@
   ![](https://media.vlpt.us/images/funnysunny08/post/e0cd9e12-a8b6-484b-80b1-58337ce7fcc2/nestjs.png)
 
 - NestJS는 Singleton 패턴을 지향하기 때문에 인스턴스를 직접 생성하지 않고 모듈을 통해 Injection 하는 패턴을 권장하고 있음.
-  Singleton 패턴: 전역 변수를 사용하지 않고 객체를 하나만 생성 하도록 하며, 생성된 객체를 어디에서든지 참조할 수 있도록 하는 패턴
 
-#### 1. Controller
+- Singleton 패턴: 전역 변수를 사용하지 않고 객체를 하나만 생성 하도록 하며, 생성된 객체를 어디에서든지 참조할 수 있도록 하는 패턴
+
+1. Controller
 
 Contoroller는 url로부터 받은 요청을 해당하는 함수로 매핑하여 함수를 실행하는 역할을 한다. 실질적인 로직을 작성하는것을 지양함. Provider 내부의 함수를 호출함.
 
-#### 2. Provider
+2. Provider
 
 Provider는 거의 모든 데이터 처리 및 비즈니스 로직을 담당함.
 다만 역할에 따라 이름이 달라짐.
@@ -28,7 +29,7 @@ Provider는 거의 모든 데이터 처리 및 비즈니스 로직을 담당함.
 위에 해당하지 않는 무언가를 하고 싶을 때 : Interceptor,
 미들웨어 : Express의 Middleware와 동일
 
-#### 3. Module
+3. Module
 
 Module은 Provider와 Controller를 합치는 역할을 함.
 또한 다른 Module이 Provider를 사용할 수 있게 export 처리를 하거나 필요한 Provider가 있는 모듈을 import해서 사용할 수 있게 해줌.

@@ -34,6 +34,14 @@ Provider는 거의 모든 데이터 처리 및 비즈니스 로직을 담당함.
 Module은 Provider와 Controller를 합치는 역할을 함.
 또한 다른 Module이 Provider를 사용할 수 있게 export 처리를 하거나 필요한 Provider가 있는 모듈을 import해서 사용할 수 있게 해줌.
 
+4. DTO
+
+계층간 데이터 교환을 위한 객체.  
+DB에서 데이터를 얻어 Service나 Controller 등으로 보낼 때 사용하는 객체.  
+DTO는 데이터가 네트워크를 통해 전송되는 방법을 정의하는 객체.
+
+interface나 class를 이용해서 정의 될 수 있음.
+
 ## NestJS의 장점
 
 1. 효율성 : 타입스크립트의 적극적인 도입, DI, IOC, Module을 통한 구조화 등의 기술을 통해 생산적인 개발이 용이함. Express의 경우 상대적으로 자유롭기 때문에 개발자마다 스타일과 선호하는 구조가 다르기 때문에 대규모 프로젝트에는 그다지 적합하지 않음.

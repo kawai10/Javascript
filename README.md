@@ -14,14 +14,18 @@
 
 ## 프로그래밍 패러다임
 
-- [FP](프로그래밍 패러다임/FP.md)
-- [OOP](프로그래밍 패러다임/OOP.md)
+- [FP](프로그래밍패러다임/FP.md)
+- [OOP](프로그래밍패러다임/OOP.md)
 
 ---
 
 ## Functional programming
 
-- [평가와 일급, 일급함수, 고차함수](Functional programming/평가와 일급, 일급 함수, 고차 함수.md)
+- [평가와 일급, 일급함수, 고차함수](FunctionalProgramming/%ED%8F%89%EA%B0%80%EC%99%80%20%EC%9D%BC%EA%B8%89%2C%20%EC%9D%BC%EA%B8%89%20%ED%95%A8%EC%88%98%2C%20%EA%B3%A0%EC%B0%A8%20%ED%95%A8%EC%88%98.md)
+
+- [제너레이터와 이터레이터](FunctionalProgramming/%EC%A0%9C%EB%84%88%EB%A0%88%EC%9D%B4%ED%84%B0%EC%99%80%20%EC%9D%B4%ED%84%B0%EB%A0%88%EC%9D%B4%ED%84%B0.md)
+
+- [ES6에서의 리스트 순회](FunctionalProgramming/ES6%EC%97%90%EC%84%9C%EC%9D%98%20%EB%A6%AC%EC%8A%A4%ED%8A%B8%20%EC%88%9C%ED%9A%8C.md)
 
 ---
 
@@ -90,3 +94,9 @@
 - [Object](sequelize/object.js)
 - [Model](sequelize/Model.js)
 - [CRUD](sequelize/CRUD.js)
+
+---
+
+## TypeScript
+
+- [Type](TypeScript/Type.ts)

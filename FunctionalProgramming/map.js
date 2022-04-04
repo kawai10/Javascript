@@ -66,3 +66,15 @@ log(
   )
 );
 // reduce
+const reduce = (f, acc, iter) => {
+  if (!iter) {
+    iter = acc[Symbol.iterator]();
+    acc = iter.next().value;
+  }
+  for (const a of iter) {
+    acc = f(acc + a);
+  }
+  return acc;
+};
+
+log(reduce((total_price, product) => total_price + product.price, 0, products));

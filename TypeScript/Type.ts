@@ -39,3 +39,7 @@ function minus(a: number, b: number, c?: number): number {
 //둘 다 가능
 minus(5, 4, 3);
 minus(5, 3);
+
+// call signatures
+type Add = (a: number, b: number) => number;
+const add: Add = (a, b) => a + b;

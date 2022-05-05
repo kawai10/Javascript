@@ -43,3 +43,15 @@ minus(5, 3);
 // call signatures
 type Add = (a: number, b: number) => number;
 const add: Add = (a, b) => a + b;
+
+// Polymorphism
+type SuperPrint = {
+  <T, V>(arr: T[], b: V): T;
+};
+
+const SuperPrint: SuperPrint = (arr) => arr[0];
+
+const a = SuperPrint([1, 2, 3], 2);
+const b = SuperPrint([true, false, true], true);
+const c = SuperPrint(["1", "2", "3"], "4");
+const d = SuperPrint([1, 2, true, "a"], true);

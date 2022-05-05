@@ -55,3 +55,33 @@ const a = SuperPrint([1, 2, 3], 2);
 const b = SuperPrint([true, false, true], true);
 const c = SuperPrint(["1", "2", "3"], "4");
 const d = SuperPrint([1, 2, true, "a"], true);
+
+// 다른 사용 방법
+function SuperPrint2<T>(arr: T[]) {
+  return a[0];
+}
+
+const a2 = SuperPrint2([1, 2, 3]);
+const b2 = SuperPrint2([true, false, true]);
+const c2 = SuperPrint2(["1", "2", "3"]);
+const d2 = SuperPrint2([1, 2, true, "a"]);
+
+// 제네릭 확장
+
+type Player<E> = {
+  name: string;
+  extraInfo: E;
+};
+
+type NicoExtra = {
+  FavFood: string;
+};
+
+type NicoPlayer = Player<NicoExtra>;
+
+const nico: NicoPlayer = {
+  name: "nico",
+  extraInfo: {
+    FavFood: "kimchi",
+  },
+};
